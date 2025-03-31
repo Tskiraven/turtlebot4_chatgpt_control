@@ -25,3 +25,7 @@ ros2 run turtlebot4_chatgpt_control terminal_control
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/你的帳號/turtlebot4_chatgpt_control.git
+
+### 2️⃣ 安裝 Python 套件
+pip install openai
+
