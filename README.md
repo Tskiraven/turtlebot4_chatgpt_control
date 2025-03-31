@@ -25,7 +25,35 @@ ros2 run turtlebot4_chatgpt_control terminal_control
 ```bash
 cd ~/ros2_ws/src
 git clone https://github.com/你的帳號/turtlebot4_chatgpt_control.git
+```
 
 ### 2️⃣ 安裝 Python 套件
+```bash
 pip install openai
+```
 
+3️⃣ 設定 OpenAI API Key
+```bash
+export OPENAI_API_KEY="sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+```
+建議加進 ~/.bashrc：
+```bash
+echo 'export OPENAI_API_KEY="sk-..."' >> ~/.bashrc
+```
+
+4️⃣ 編譯套件
+```bash
+cd ~/ros2_ws
+colcon build --packages-select turtlebot4_chatgpt_control
+source install/setup.bash
+```
+🚀 執行方式
+```bash
+ros2 run turtlebot4_chatgpt_control terminal_control
+```
+會出現：
+```bash
+==== 請輸入自然語言控制 TurtleBot4 ====
+>>> 往前走一公尺
+ChatGPT 轉換指令：move_forward(1.0)
+```
